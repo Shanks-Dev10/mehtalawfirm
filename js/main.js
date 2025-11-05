@@ -291,4 +291,23 @@
     renderBlogs();
     renderPagination();
   });
+  const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
+
+  // Make first slide active on load
+  slides[currentSlide].classList.add("active");
+
+  function showNextSlide() {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add("active");
+  }
+
+  // Change slide every 6 seconds
+  setInterval(showNextSlide, 6000);
+
+    AOS.init({
+    duration: 1000, // animation duration in ms
+    once: true,     // animate only once
+  });
 })(jQuery);

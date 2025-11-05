@@ -26,6 +26,8 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -33,6 +35,7 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
+
 
 <body>
     <!-- Spinner Start -->
@@ -52,7 +55,7 @@
                             class="logo logo-default"> <img src="img/logo.avif" alt="Logo Gold"
                             class="logo logo-scrolled"></span></a>
                 <div style="display: flex;flex-direction: column;">
-                    <h2 style="margin-bottom: 0px;" ><a class="logo-text" href="index.html">MGA</a></h2>
+                    <h2 style="margin-bottom: 0px;"><a class="logo-text" href="index.html">MGA</a></h2>
                     <p>Since 1973</p>
                 </div>
                 </a>
@@ -114,12 +117,35 @@
     </div>
     <!-- Navbar End -->
 
+
     <!-- Header Start -->
-    <div class="header">
-        <h1>Scale Globally Structure Compliantly.</h1>
-        <p>Building Tomorrow, Together</p>
-    </div>
+    <section class="hero-section">
+        <div class="slide "
+            style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/red-hp-bannerbg.png');">
+            <div class="header-content"  >
+                <h1>Scale Globally Structure Compliantly.</h1>
+                <p>Building Tomorrow, Together</p>
+            </div>
+        </div>
+
+        <div class="slide"
+            style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/red-hp-bannerbg.png');">
+            <div class="header-content" >
+                <h1>Innovate. Expand. Excel.</h1>
+                <p>Creating Growth Opportunities</p>
+            </div>
+        </div>
+
+        <div class="slide"
+            style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/red-hp-bannerbg.png');">
+            <div class="header-content" >
+                <h1>Integrity. Partnership. Impact.</h1>
+                <p>Delivering Trusted Advisory</p>
+            </div>
+        </div>
+    </section>
     <!-- Header End -->
+
 
     <!-- Section1 Start -->
     <div class="section-1 container">
@@ -133,10 +159,10 @@
     </div>
     <div class="container sec-1">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-aos="fade-right">
                 <img src="/img/homepage-panel.jpg" alt="image" class="image">
             </div>
-            <div class="col-lg-6  lg-p-5 pt-4">
+            <div class="col-lg-6  lg-p-5 pt-4" data-aos="fade-left">
                 <h2>METHA GLOBAL ADVISORY</h2>
                 <h4>Building Tomorrow Today</h4>
                 <p>Since 1973, Mehta Global Advisory helps founders, CFOs and investors with capital structuring &
@@ -148,11 +174,10 @@
                 <button>LEARN MORE</button>
             </div>
         </div>
-
     </div>
     <div class="container section-1-sub3">
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12  feature-box text-justify">
+            <div class="col-lg-4 col-md-6 col-sm-12  feature-box text-justify" data-aos="fade-right">
                 <span class="icon"><i class="fa-solid fa-gear"></i></span>
                 <h3>Professional</h3>
                 <p>
@@ -160,7 +185,7 @@
                     placeat.
                 </p>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12  feature-box">
+            <div class="col-lg-4 col-md-6 col-sm-12  feature-box" data-aos="fade-up">
                 <span class="icon"><i class="fa-solid fa-gear"></i></span>
                 <h3>Experience</h3>
                 <p>
@@ -168,7 +193,7 @@
                     placeat.
                 </p>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12  feature-box">
+            <div class="col-lg-4 col-md-6 col-sm-12  feature-box" data-aos="fade-left">
                 <span class="icon"><i class="fa-regular fa-face-smile"></i></span>
                 <h3>Connect</h3>
                 <p>
@@ -185,7 +210,7 @@
 
     <!-- section2 start -->
     <div class="container ">
-        <div class="d-flex flex-column justify-content-center align-items-center gap-2 mb-5 section-2">
+        <div class="d-flex flex-column justify-content-center align-items-center gap-2 mb-5 section-2" data-aos="fade-up">
             <h2 style="color: #ca250a;">EXPLORE OUR SERVICES</h2>
             <p style="text-align: center;">
                 At Mehta Global Advisory, we understand that turning dreams into reality requires
@@ -194,7 +219,7 @@
         </div>
 
         <div class="services-container">
-            <div class="our-services">
+            <div class="our-services" data-aos="fade-right">
                 <img src="/img/svg/taxes.svg" alt="tax" class="logo">
                 <div>
                     <h3>Legal and Compliances</h3>
@@ -205,7 +230,7 @@
                 </div>
             </div>
 
-            <div class="our-services">
+            <div class="our-services" data-aos="fade-left">
                 <img src="/img/svg/taxes.svg" alt="tax" class="logo">
                 <div>
                     <h3>Audit and Tax Consulting</h3>
@@ -216,7 +241,7 @@
                 </div>
             </div>
 
-            <div class="our-services">
+            <div class="our-services" data-aos="fade-right">
                 <img src="/img/svg/taxes.svg" alt="tax" class="logo">
                 <div>
                     <h3>Governanace and Risk Management</h3>
@@ -227,7 +252,7 @@
                 </div>
             </div>
 
-            <div class="our-services">
+            <div class="our-services" data-aos="fade-left">
                 <img src="/img/svg/taxes.svg" alt="tax" class="logo">
                 <div>
                     <h3>Capital Structuring and Fund Raising </h3>
@@ -238,7 +263,7 @@
                 </div>
             </div>
 
-            <div class="our-services">
+            <div class="our-services" data-aos="fade-right">
                 <img src="/img/svg/taxes.svg" alt="tax" class="logo">
                 <div>
                     <h3>Strategic Planning </h3>
@@ -249,7 +274,7 @@
                 </div>
             </div>
 
-            <div class="our-services">
+            <div class="our-services" data-aos="fade-left">
                 <img src="/img/svg/taxes.svg" alt="tax" class="logo">
                 <div>
                     <h3>IPO Readiness</h3>
@@ -285,11 +310,6 @@
             <img src="/img/logo3.png" alt="logo">
             <img src="/img/logo1.png" alt="logo">
             <img src="/img/logo2.png" alt="logo">
-            <img src="/img/logo3.png" alt="logo">
-            <img src="/img/logo1.png" alt="logo">
-            <img src="/img/logo2.png" alt="logo">
-            <img src="/img/logo3.png" alt="logo">
-            <img src="/img/logo1.png" alt="logo">
         </div>
     </div>
     <!-- section4 End  -->
@@ -299,7 +319,7 @@
     <div class="container section-5">
         <h2>INSIGHTS</h2>
         <div class="row g-4">
-            <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="col-lg-4 col-md-6 col-sm-12" >
                 <img src="/img/service-2.jpg" alt="insights" />
                 <span>TOPIC ONE</span>
                 <p>The Role Of Advance Pricing Agreements in...</p>
@@ -308,7 +328,7 @@
                     <p>No Comments</p>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="col-lg-4 col-md-6 col-sm-12">
                 <img src="/img/service-2.jpg" alt="insights" />
                 <span>TOPIC ONE</span>
                 <p>The Role Of Advance Pricing Agreements in...</p>
@@ -317,16 +337,7 @@
                     <p>No Comments</p>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <img src="/img/service-2.jpg" alt="insights" />
-                <span>TOPIC ONE</span>
-                <p>The Role Of Advance Pricing Agreements in...</p>
-                <div>
-                    <p>Sep 8, 2025</p>
-                    <p>No Comments</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="col-lg-4 col-md-6 col-sm-12">
                 <img src="/img/service-2.jpg" alt="insights" />
                 <span>TOPIC ONE</span>
                 <p>The Role Of Advance Pricing Agreements in...</p>
@@ -419,6 +430,10 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
+    <!-- swiperjs -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

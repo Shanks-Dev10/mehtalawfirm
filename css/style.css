@@ -6,6 +6,55 @@
   --light: #dfe4fd;
   --dark: #011a41;
 }
+
+/* Regular */
+@font-face {
+  font-family: "ITC-Charter";
+  src: url("../fonts/charter-itc-tt-587bd77031c7e.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Italic */
+@font-face {
+  font-family: "ITC-Charter";
+  src: url("../fonts/charter-itc-tt-italic-587bd78ad37ea.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Small Caps / SC variant */
+@font-face {
+  font-family: "ITC-Charter";
+  src: url("../fonts/charter-sc-itc-tt-587bd7e5e3f51.ttf") format("truetype");
+  font-weight: bold; /* you can choose bold if this is intended */
+  font-style: normal;
+}
+@font-face {
+  font-family: Arial, Helvetica, sans-serif;
+  src: url(/fonts/HelveticaNeueBold.otf) format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: "ITC-Charter", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Optional: headings use same font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "ITC-Charter", sans-serif;
+}
+p{
+  font-family: Arial, Helvetica, sans-serif;
+}
 .container {
   max-width: 90%;
   margin: 100px auto;
@@ -17,16 +66,6 @@
   right: 30px;
   bottom: 30px;
   z-index: 99;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  font-family: "Hepta Slab", serif !important;
-  /* font-family: "Aptos Slab", serif; */
 }
 
 p {
@@ -134,7 +173,8 @@ h6,
   position: fixed;
   width: 100%;
   z-index: 999;
-  background-color: rgba(202, 37, 10, 0.9); /* red with 90% opacity */
+  background-color: transparent;
+  /* background-color: rgba(202, 37, 10, 0.9); */
   transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 
@@ -182,9 +222,9 @@ h6,
   vertical-align: middle;
   margin-left: 8px;
 }
-.navbar .nav-item .dropdown-menu a {
+/* .navbar .nav-item .dropdown-menu a {
   font-family: "Hepta Slab", serif;
-}
+} */
 
 /* Default nav link style (used after scroll) */
 .navbar .navbar-nav .nav-link {
@@ -206,7 +246,6 @@ h6,
 /* When at top (transparent navbar) */
 .fixed-nav .navbar-nav .nav-link {
   color: white !important;
-  font-family: "Hepta Slab", serif;
 }
 
 .fixed-nav .logo-text {
@@ -234,25 +273,21 @@ h6,
   color: white; /* white text */
   transition: color 0.3s ease;
   cursor: pointer;
-  font-family: "Hepta Slab", serif;
   font-weight: 500;
   display: none;
 }
 .fixed-nav.scrolled .search-btn {
   color: var(--tertiary); /* or #FFD700 */
-  font-family: "Hepta Slab", serif;
 }
 
 /* When scrolled (normal colors again) */
 .fixed-nav.scrolled .navbar-nav .nav-link {
   color: var(--tertiary) !important;
-  font-family: "Hepta Slab", serif;
 }
 
 /* Hover when scrolled */
 .fixed-nav.scrolled .navbar-nav .nav-link:hover {
   color: var(--primary) !important;
-  font-family: "Hepta Slab", serif;
 }
 
 .custom-navbar {
@@ -277,24 +312,85 @@ h6,
   align-items: center;
 }
 
-.header {
-  height: 70vh;
+/* header */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 95vh;
   overflow: hidden;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(/img/red-hp-bannerbg.png) top center no-repeat;
+}
+
+/* Each slide (background image) */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  overflow: hidden; /* important to hide zoom overflow */
+  transition: opacity 1s ease;
+}
+
+/* Pseudo-element to zoom background only */
+.slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit; /* copy the same background as slide */
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  transform: scale(1);
+  transition: transform 10s ease;
+}
+
+/* Active slide: fade in and zoom background */
+.slide.active {
+  opacity: 1;
+}
+.slide.active::after {
+  transform: scale(1.15); /* zoom only the background */
+}
+
+/* Keep text static */
+.header-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: center;
-  padding-bottom: 100px;
+  color: white;
+  z-index: 2;
+  padding-bottom: 150px;
+  opacity: 0; /* start invisible */
+  transform: translateY(150px); /* start slightly down */
+  transition: opacity 3s ease, transform 3s ease; /* animate */
+}
+.slide.active .header-content {
+  opacity: 1; /* fade in */
+  transform: translateY(0); /* slide up */
+}
+
+/* Text styling */
+.header-content h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
   color: white;
 }
 
-.header h1 {
-  color: white;
-  font-weight: 500;
+.header-content p {
+  font-size: 1.2rem;
+  margin-top: 10px;
 }
+
 .header2 {
   height: 50vh;
   overflow: hidden;
@@ -405,7 +501,6 @@ h6,
 .sec-1 h2 {
   color: var(--primary);
   font-size: 32px;
-  font-family: "Hepta Slab", serif;
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -413,13 +508,11 @@ h6,
   color: #7c7c7c;
   font-size: 24px;
   font-weight: 500;
-  font-family: "Hepta Slab", serif;
   margin-bottom: 20px;
 }
 .sec-1 p {
   font-size: 16px !important;
   color: #7c7c7c;
-  font-family: "Hepta Slab", serif;
   font-weight: 500;
 }
 .sec-1 button {
@@ -431,7 +524,6 @@ h6,
   cursor: pointer;
   font-size: 12px;
   font-weight: 600;
-  font-family: "Hepta Slab", serif;
   margin-top: 20px;
 }
 .section-1 {
@@ -448,9 +540,11 @@ h6,
   padding: 30px;
   margin-top: -50px;
   gap: 80px;
+  position: relative;
+  z-index: 11;
 }
+
 .section-1_sub p {
-  font-family: "Hepta Slab", serif;
   margin: 0px;
   padding-right: 20px;
   font-weight: 400;
@@ -483,7 +577,6 @@ h6,
 }
 
 .feature-box h3 {
-  font-family: "Hepta Slab", serif;
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 10px;
@@ -507,7 +600,6 @@ h6,
   font-weight: 600;
   color: var(--primary);
   text-align: center;
-  font-family: "Hepta Slab", serif;
   font-size: 32px;
 }
 .service-section1 h3 {
@@ -515,7 +607,6 @@ h6,
   text-align: center;
   color: #7c7c7c;
   font-weight: 500;
-  font-family: "Hepta Slab", serif;
 }
 
 .section-2 p {
@@ -523,7 +614,6 @@ h6,
   max-width: 70%;
   margin: 0 auto;
   font-weight: 500;
-  font-family: "Hepta Slab", serif !important;
   text-align: center;
 }
 
@@ -564,7 +654,6 @@ h6,
 /* Headings and text */
 .our-services h3 {
   margin-bottom: 8px;
-  font-family: "Hepta Slab", serif;
   font-size: 24px !important;
   font-weight: 500;
   color: #000000;
@@ -575,7 +664,6 @@ h6,
   color: #7c7c7c;
   line-height: 25px !important;
   font-size: 16px !important;
-  font-family: "Hepta Slab", serif;
   font-weight: 500;
   text-align: left;
 }
@@ -600,7 +688,6 @@ h6,
 .section-3 h2 {
   color: white;
   font-size: 40px;
-  font-family: "Hepta Slab", serif !important;
   font-weight: 500;
   margin: 0;
   width: 500px;
@@ -659,13 +746,12 @@ h6,
   color: var(--primary);
   padding: 50px 0px;
   padding-top: 0px;
-  font-family: "Hepta Slab", serif;
   font-weight: 600;
   font-size: 32px;
 }
 .section-5 img {
   width: 100%;
-  height: 250px;
+  height: 350px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -678,7 +764,6 @@ h6,
   font-size: 14px;
   margin-top: 10px;
   letter-spacing: 0.5px;
-  font-family: "Hepta Slab", serif;
 }
 
 .section-5 p {
@@ -686,7 +771,6 @@ h6,
   color: #7c7c7c;
   font-size: 18px !important;
   line-height: 25px !important;
-  font-family: "Hepta Slab", serif;
   font-weight: 500;
 }
 
@@ -704,7 +788,6 @@ h6,
   font-size: 14px !important;
   color: #000000;
   margin: 0;
-  font-family: "Hepta Slab", serif;
   font-weight: 400;
 }
 .section-5 .btn {
@@ -746,34 +829,6 @@ h6,
   font-size: 0.95rem;
   color: #666;
   margin: 10px 20px 0;
-}
-
-swiper-container {
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 50px;
-  border-radius: 10px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; /* ✅ Keep this */
-}
-
-swiper-slide img {
-  display: block;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #ca250a;
 }
 
 /* .demo{ background: #f8f7f6; } */
@@ -886,7 +941,6 @@ swiper-slide img {
 .teams-section1-cont h4 {
   color: #7c7c7c;
   font-size: 24px !important;
-  font-family: "Hepta Slab", serif;
   font-weight: 500;
   line-height: 30px;
 }
@@ -993,7 +1047,6 @@ swiper-slide img {
 .inner-box h2 {
   color: #000;
   font-weight: 600;
-  font-family: "Hepta Slab", serif !important;
   font-size: 24px !important;
 }
 
@@ -1009,7 +1062,6 @@ swiper-slide img {
 .industry-sec1 h2 {
   font-weight: 500;
   text-align: center;
-  font-family: "Hepta Slab", serif;
   font-size: 32px;
   text-transform: uppercase;
   color: #ca250a;
@@ -1025,7 +1077,6 @@ swiper-slide img {
 .industry-section2 h2 {
   font-weight: 500;
   text-align: center;
-  font-family: "Hepta Slab", serif;
   font-size: 32px;
   text-transform: uppercase;
   color: #ca250a;
@@ -1079,7 +1130,6 @@ swiper-slide img {
 .industry-section3 h2 {
   color: white;
   font-size: 40px;
-  font-family: "Hepta Slab", serif;
   font-weight: 500;
   margin: 0;
   width: 500px;
@@ -1098,7 +1148,6 @@ swiper-slide img {
 .contact-section1 h2 {
   font-weight: 600;
   text-align: center;
-  font-family: "Hepta Slab", serif;
   font-size: 32px;
   text-transform: uppercase;
   color: #ca250a;
@@ -1177,15 +1226,14 @@ swiper-slide img {
   color: #000000;
   font-weight: 500;
   font-size: 26px;
-  font-family: "Hepta Slab", serif !important;
 }
 
-.form-floating > label {
+/* .form-floating > label {
   font-family: "Hepta Slab", serif !important;
 }
 label {
   font-family: "Hepta Slab", serif !important;
-}
+} */
 .form .btn {
   display: flex;
   justify-content: center;
@@ -1274,7 +1322,6 @@ label {
   color: var(--primary);
   padding: 50px 0px;
   padding-top: 0px;
-  font-family: "Hepta Slab", serif;
   font-weight: 600;
 }
 
@@ -1287,7 +1334,6 @@ label {
 .legal-sec1 h2 {
   font-weight: 500;
   color: #ca250a;
-  font-family: "Hepta Slab", serif;
   text-align: center;
   text-transform: uppercase;
 }
@@ -1320,7 +1366,6 @@ label {
   cursor: pointer;
   font-size: 12px;
   font-weight: 600;
-  font-family: "Hepta Slab", serif;
   margin-top: 20px;
 }
 .footer-sec {
@@ -1446,7 +1491,22 @@ label {
   .section-5 h2 {
     font-weight: 500 !important;
   }
-  .header,
+  .section-5 img {
+    height: 250px;
+  }
+  .hero-section {
+    height: 80vh;
+  }
+
+  .header-content h1 {
+    font-size: 1.8rem;
+    padding: 10px;
+  }
+
+  .header-content p {
+    font-size: 1rem;
+  }
+
   .header2 {
     padding: 100px 20px;
     text-align: center;
@@ -1476,7 +1536,6 @@ label {
   }
   .fixed-nav .navbar-nav .nav-link {
     color: var(--tertiary) !important;
-    font-family: "Hepta Slab", serif;
   }
   .section-1_sub {
     padding: 30px 15px;
@@ -1560,7 +1619,6 @@ label {
     padding-bottom: 0px;
     border: none;
     font-size: 14px !important;
-    font-family: "Hepta Slab", serif;
     font-weight: 500;
   }
   .feature-box {
@@ -1601,7 +1659,7 @@ label {
     font-size: 18px;
     font-weight: 500;
   }
-  .section-2 p{
+  .section-2 p {
     max-width: 100%;
   }
 

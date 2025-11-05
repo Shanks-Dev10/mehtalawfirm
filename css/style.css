@@ -212,11 +212,21 @@ h6,
 .fixed-nav .logo-text {
   color: white;
   transition: color 0.3s ease;
+  margin-bottom: 0px;
+}
+.fixed-nav p {
+  color: white;
+  font-size: 12px !important;
+  text-align: right;
+  line-height: 15px !important;
 }
 
 /* After scroll (white navbar) */
 .fixed-nav.scrolled .logo-text {
   color: #c9825b; /* You can use #FFD700 for gold */
+}
+.fixed-nav.scrolled p {
+  color: #c9825b;
 }
 .fixed-nav .search-btn {
   background: none;
@@ -288,13 +298,15 @@ h6,
 .header2 {
   height: 50vh;
   overflow: hidden;
-  background: url(/img/red-hp-bannerbg.png) top center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/img/red-hp-bannerbg.png) top center no-repeat;
+  background-size: cover;
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: center;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   color: white;
 }
 .header2 h1 {
@@ -486,19 +498,34 @@ h6,
 }
 
 /* Section heading */
-.section-2 h2 {
+.service-section1,
+.service-section2 {
+  max-width: 90%;
+  margin: 50px auto;
+}
+.service-section1 h2 {
   font-weight: 600;
   color: var(--primary);
   text-align: center;
   font-family: "Hepta Slab", serif;
   font-size: 32px;
 }
+.service-section1 h3 {
+  font-size: 18px;
+  text-align: center;
+  color: #7c7c7c;
+  font-weight: 500;
+  font-family: "Hepta Slab", serif;
+}
 
 .section-2 p {
-  font-weight: 400;
-  max-width: 550px;
+  font-size: 18px !important;
+  max-width: 70%;
   width: 100%;
   margin: 0 auto;
+  font-weight: 500;
+  font-family: "Hepta Slab", serif !important;
+  text-align: center;
 }
 
 /* Services layout */
@@ -551,6 +578,7 @@ h6,
   font-size: 16px !important;
   font-family: "Hepta Slab", serif;
   font-weight: 500;
+  text-align: left;
 }
 .section-3 {
   background: url(/img/red-hp-reachoutbg.png) top/cover no-repeat;
@@ -692,14 +720,6 @@ h6,
 
 /* service Page */
 
-.service-section1 h2 {
-  font-size: 18px;
-  text-align: center;
-  color: #7c7c7c;
-  font-weight: 500;
-  font-family: "Hepta Slab", serif;
-  margin-bottom: 50px;
-}
 .service-card {
   border-radius: 10px;
   overflow: hidden;
@@ -866,13 +886,14 @@ swiper-slide img {
 }
 .teams-section1-cont h4 {
   color: #7c7c7c;
-  font-size: 18px !important;
+  font-size: 24px !important;
   font-family: "Hepta Slab", serif;
   font-weight: 500;
-  line-height: 25px;
+  line-height: 30px;
 }
 .teams-section1-cont p {
   color: #7c7c7c;
+  font-size: 18px !important;
 }
 .team-sec2-head {
   display: flex;
@@ -887,18 +908,25 @@ swiper-slide img {
 }
 .teams-section1 img {
   width: 100%;
+  height: 80%;
   object-fit: cover;
   padding: 0px;
+}
+.teams-section1 .row {
+  align-items: center;
 }
 .teams-section1-cont {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   gap: 10px;
+  padding: 0px 50px !important;
 }
 .teams-section1-cont p {
-  margin: 0px;
+  margin-top: 15px;
+  text-align: center;
+  margin-bottom: 0px !important;
 }
 .teams-section2 img {
   width: 100%;
@@ -1239,7 +1267,7 @@ label {
 }
 .legacy-img-con img {
   width: 100%;
-  height: 100%;
+  height: 80%;
   object-fit: cover;
 }
 .legacy-h2 {
@@ -1525,16 +1553,16 @@ label {
   }
   .section-1_sub {
     flex-direction: column;
-    padding: 30px 15px;
+    padding: 20px 15px;
     gap: 10px;
   }
   .section-1_sub p {
     padding-right: 0px !important;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     border: none;
-    font-size: 16px !important;
+    font-size: 14px !important;
     font-family: "Hepta Slab", serif;
-    font-weight: 600;
+    font-weight: 500;
   }
   .feature-box {
     padding: 20px;

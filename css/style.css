@@ -521,7 +521,6 @@ h6,
 .section-2 p {
   font-size: 18px !important;
   max-width: 70%;
-  width: 100%;
   margin: 0 auto;
   font-weight: 500;
   font-family: "Hepta Slab", serif !important;
@@ -1601,6 +1600,9 @@ label {
   .section-2 h2 {
     font-size: 18px;
     font-weight: 500;
+  }
+  .section-2 p{
+    max-width: 100%;
   }
 
   /* teams */

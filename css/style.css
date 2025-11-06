@@ -38,9 +38,15 @@
   font-style: normal;
 }
 
-body {
+body,
+html {
+  width: 100%;
   font-family: "ITC-Charter", sans-serif;
   overflow-x: hidden;
+}
+
+[data-aos] {
+  overflow-x: clip;
 }
 
 /* Optional: headings use same font */
@@ -52,7 +58,7 @@ h5,
 h6 {
   font-family: "ITC-Charter", sans-serif;
 }
-p{
+p {
   font-family: Arial, Helvetica, sans-serif;
 }
 .container {

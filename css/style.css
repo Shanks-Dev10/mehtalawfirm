@@ -403,7 +403,7 @@ h6,
 /* Text styling */
 .header-content h1 {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
   margin-bottom: 1rem;
   color: white;
@@ -441,7 +441,6 @@ h6,
   overflow: hidden;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(/img/red-hp-bannerbg.png) top center no-repeat;
-  background-size: cover;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -532,6 +531,11 @@ h6,
   color: #6b7775;
   font-size: 14px;
 }
+.section-1-container {
+  max-width: 90%;
+  margin: auto;
+  margin-top: 100px;
+}
 
 .sec-1 img {
   width: 100%;
@@ -550,8 +554,8 @@ h6,
 }
 .sec-1 h4 {
   color: black;
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 36px;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 .sec-1 p {
@@ -624,7 +628,7 @@ h6,
 
 .feature-box h3 {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
   color: black;
   margin: 0px;
 }
@@ -637,7 +641,9 @@ h6,
   text-align: center;
 }
 .section-2 {
-  background: url(/img/explore-service-bg.png) center no-repeat;
+  background: url(/img/explore-servicebg01.webp) center center no-repeat;
+  background-size: cover; /* makes the image cover full width and height */
+  width: 100%;
 }
 .section-2-container {
   max-width: 90%;
@@ -674,7 +680,7 @@ h6,
 
 /* Services layout */
 .services-container {
-  background-color: #ffffff98;
+  background-color: #ffffff;
   padding: 100px 30px;
   row-gap: 30px;
 }
@@ -723,7 +729,7 @@ h6,
 }
 .section-2-container-right h3 {
   font-size: 36px;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 20px;
   color: white;
 }
@@ -764,6 +770,7 @@ h6,
   justify-content: end;
   align-items: center;
   padding-right: 80px;
+  background-size: cover;
 }
 
 .section-3 .reach-out {
@@ -816,8 +823,8 @@ h6,
 }
 .section-4 h2 {
   color: black;
-  font-weight: 600;
-  font-size: 32px;
+  font-weight: 700;
+  font-size: 36px;
   margin: 0px;
 }
 
@@ -842,11 +849,11 @@ h6,
 }
 .section-5 h2 {
   text-align: center;
-  color: var(--primary);
+  color:black;
   padding: 50px 0px;
   padding-top: 0px;
-  font-weight: 600;
-  font-size: 32px;
+  font-weight: 700;
+  font-size: 36px;
 }
 .section-5 img {
   width: 100%;
@@ -902,7 +909,7 @@ h6,
   background: transparent;
   border: 1px solid black;
   color: black;
-  padding:10px 20px;
+  padding: 10px 20px;
   text-decoration: none;
   transition: all 0.3s ease;
   display: flex;
@@ -1231,6 +1238,7 @@ h6,
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-size: cover;
 }
 
 .industry-section3 .reach-out {
@@ -1607,6 +1615,15 @@ label {
   .header-content h1 {
     font-size: 36px;
   }
+  .services-container {
+    padding: 100px 20px;
+  }
+  .section-2-container-right {
+    padding: 20px 0px;
+  }
+  .section-2-container-right h3 {
+    font-size: 24px;
+  }
   .section-5 h2 {
     font-weight: 500 !important;
   }
@@ -1655,10 +1672,7 @@ label {
     border: none;
     font-size: 18px;
   }
-  .our-services {
-    align-items: flex-start;
-    gap: 20px;
-  }
+
   .our-services h3 {
     font-size: 16px !important;
   }
@@ -1685,6 +1699,7 @@ label {
   .section-3 {
     padding: 0px;
     text-align: center;
+    justify-content: center;
   }
   .section-3 .reach-out {
     display: flex;
@@ -1704,6 +1719,11 @@ label {
   }
 }
 @media (max-width: 767px) {
+
+  .section-2-container{
+    max-width: 100%;
+    padding: 20px;
+  }
   .header-content {
     align-items: start;
     padding: 60px 20px;
@@ -1744,10 +1764,7 @@ label {
   .feature-box {
     padding: 20px;
   }
-  .our-services {
-    flex: 1 1 100%;
-    align-items: flex-start;
-  }
+
   .our-services p {
     text-align: start;
   }

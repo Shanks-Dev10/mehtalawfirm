@@ -436,7 +436,7 @@ h6,
   color: black;
 }
 /* Pagination dots */
-.pagination {
+.pagination1 {
   position: absolute;
   bottom: 40px;
   left: 50%;
@@ -446,7 +446,7 @@ h6,
   z-index: 10;
 }
 
-.pagination .dot {
+.pagination1 .dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -455,7 +455,7 @@ h6,
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.pagination .dot.active {
+.pagination1 .dot.active {
   background-color: white;
   transform: scale(1.2);
 }

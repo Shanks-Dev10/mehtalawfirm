@@ -793,14 +793,14 @@ h6,
   display: flex;
   justify-content: end;
   align-items: center;
-  padding-right: 80px;
+  padding-right: 150px;
   background-size: cover;
 }
 
 .section-3 .reach-out {
   display: flex;
   align-items: center;
-  gap: 150px;
+  gap: 50px;
 }
 .reach-out-con {
   display: flex;

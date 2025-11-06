@@ -40,7 +40,7 @@
     }
   });
   $(".back-to-top").click(function () {
-    $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
+    $("html, body").animate({ scrollTop: 0 },  "easeInOutExpo");
     return false;
   });
 
@@ -292,22 +292,35 @@
     renderPagination();
   });
   const slides = document.querySelectorAll(".slide");
+  const dots = document.querySelectorAll(".dot");
   let currentSlide = 0;
 
-  // Make first slide active on load
-  slides[currentSlide].classList.add("active");
-
-  function showNextSlide() {
-    slides[currentSlide].classList.remove("active");
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add("active");
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
+      dots[i].classList.toggle("active", i === index);
+    });
   }
 
-  // Change slide every 6 seconds
-  setInterval(showNextSlide, 6000);
+  // Auto slide every 6s
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }, 6000);
 
-    AOS.init({
+  // Clickable pagination
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      currentSlide = i;
+      showSlide(currentSlide);
+    });
+  });
+
+  // Initialize first slide
+  showSlide(currentSlide);
+
+  AOS.init({
     duration: 1000, // animation duration in ms
-    once: true,     // animate only once
+    once: true, // animate only once
   });
 })(jQuery);

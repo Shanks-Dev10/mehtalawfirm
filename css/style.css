@@ -435,6 +435,30 @@ h6,
   background: white;
   color: black;
 }
+/* Pagination dots */
+.pagination {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.pagination .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pagination .dot.active {
+  background-color: white;
+  transform: scale(1.2);
+}
 
 .header2 {
   height: 50vh;
@@ -755,15 +779,15 @@ h6,
   margin-top: 20px;
 }
 .section-2-container-right a:hover {
-  background: #000;
-  color: white;
+  background: white;
+  color: black;
   border-color: black;
 }
 
 .section-3 {
   background: url(/img/home-reachus-bg.png) top/cover no-repeat;
   width: 100%;
-  height: 300px;
+  height: 350px;
   margin: 100px 0;
   color: white;
   display: flex;
@@ -775,8 +799,13 @@ h6,
 
 .section-3 .reach-out {
   display: flex;
-  align-items: end;
+  align-items: center;
   gap: 150px;
+}
+.reach-out-con {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .section-3 h2 {
@@ -849,7 +878,7 @@ h6,
 }
 .section-5 h2 {
   text-align: center;
-  color:black;
+  color: black;
   padding: 50px 0px;
   padding-top: 0px;
   font-weight: 700;
@@ -859,7 +888,10 @@ h6,
   width: 100%;
   height: 350px;
   object-fit: cover;
-  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.section-5 img:hover {
+  transform: scale(1.1);
 }
 
 .section-5 span {
@@ -903,20 +935,22 @@ h6,
   padding: 30px 0px;
 }
 .section-5 .btn a {
-  display: inline-flex;
-  align-items: center;
   gap: 8px;
   background: transparent;
   border: 1px solid black;
   color: black;
   padding: 10px 20px;
+  border-radius: 4px;
   text-decoration: none;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   gap: 20px;
   width: fit-content;
-  margin-top: 20px;
+}
+.section-5 .btn a:hover {
+  background-color: black;
+  color: white;
 }
 
 /* service Page */
@@ -1612,6 +1646,10 @@ label {
     left: 0;
     padding-bottom: 50px;
   }
+
+  .section-1-container{
+    margin-top: 30px;
+  }
   .header-content h1 {
     font-size: 36px;
   }
@@ -1719,8 +1757,7 @@ label {
   }
 }
 @media (max-width: 767px) {
-
-  .section-2-container{
+  .section-2-container {
     max-width: 100%;
     padding: 20px;
   }

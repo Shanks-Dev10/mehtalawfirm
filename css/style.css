@@ -226,6 +226,9 @@ h6,
   color: white; /* initial logo color */
   transition: color 0.5s ease;
 }
+.fixed-nav .navbar-nav .dropdown:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
 
 .fixed-nav.scrolled .navbar-brand h1 {
   color: gold; /* gold after scroll */
@@ -238,7 +241,9 @@ h6,
   font-weight: 800;
   vertical-align: middle;
   margin-left: 8px;
+  transition: transform 0.3s ease;
 }
+
 /* .navbar .nav-item .dropdown-menu a {
   font-family: "Hepta Slab", serif;
 } */
@@ -306,6 +311,10 @@ h6,
 /* Hover when scrolled */
 .fixed-nav.scrolled .navbar-nav .nav-link:hover {
   color: var(--primary) !important;
+}
+
+.fixed-nav.scrolled .navbar-nav .dropdown:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
 }
 
 .custom-navbar {
@@ -718,6 +727,31 @@ h6,
   text-align: center;
 }
 
+.services-container1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  column-gap: 20px;
+  row-gap: 30px;
+  justify-content: center;
+}
+.our-services1 {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex: 1 1 45%;
+  min-width: 300px;
+  padding: 30px 20px;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+}
+.our-services1 h3 {
+  margin-bottom: 8px;
+  font-size: 26px !important;
+  font-weight: 500;
+  color: #000000;
+}
+
 /* Icon */
 .our-services .logo {
   width: 50px;
@@ -892,7 +926,6 @@ h6,
 .insights-card:hover .section-5-img {
   background-size: 120%;
 }
-
 
 .insights-card span {
   display: inline-block;
@@ -1260,7 +1293,7 @@ h6,
   margin: 0px;
   color: #7c7c7c;
   font-weight: 500;
-  font-size: 14px !important;
+  font-size: 16px !important;
 }
 .industry-section3 {
   background: url(/img/red-hp-reachoutbg.png) top/cover no-repeat;
@@ -1647,7 +1680,7 @@ label {
     padding-bottom: 50px;
   }
 
-  .section-1-container{
+  .section-1-container {
     margin-top: 30px;
   }
   .header-content h1 {
@@ -1710,6 +1743,11 @@ label {
     border: none;
     font-size: 18px;
   }
+
+  .our-services1{
+    align-items: start;
+  }
+
 
   .our-services h3 {
     font-size: 16px !important;

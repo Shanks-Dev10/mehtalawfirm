@@ -446,8 +446,8 @@ h6,
 }
 
 .header-content .btn:hover {
-  background: white;
-  color: black;
+  background: #ca250a;
+  color: white;
 }
 /* Pagination dots */
 .pagination1 {
@@ -671,8 +671,9 @@ h6,
   width: fit-content;
 }
 .sec-1 a:hover {
-  background-color: black;
+  background-color: #ca250a;
   color: white;
+  border-color: white;
 }
 
 .section-1_sub {
@@ -870,8 +871,8 @@ h6,
   margin-top: 20px;
 }
 .section-2-container-right a:hover {
-  background: white;
-  color: black;
+  background: #ca250a;
+  color: white;
   border-color: black;
 }
 
@@ -1062,8 +1063,9 @@ h6,
   width: fit-content;
 }
 .section-5 .btn a:hover {
-  background-color: black;
+  background-color: #ca250a;
   color: white;
+  border-color: white;
 }
 
 /* service Page */
@@ -1262,12 +1264,13 @@ h6,
 }
 .teams-section2 .name {
   margin-top: 20px;
-  font-weight: 600;
+  font-weight: 500;
   color: #333;
   text-align: center;
   margin-bottom: 0px;
   font-family: "ITC-Charter", sans-serif;
   font-size: 20px !important;
+  text-transform: none;
 }
 
 .teams-section2 .role {
@@ -1317,6 +1320,7 @@ h6,
   border-radius: 10px;
   gap: 10px;
 }
+
 .inner-box h2 {
   color: #000;
   font-weight: 600;

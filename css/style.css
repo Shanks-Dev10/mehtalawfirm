@@ -1798,6 +1798,10 @@ label {
 }
 
 @media (max-width: 768px) {
+
+  .section-1-sub3{
+    padding: 20px;
+  }
   .header-content {
     left: 0;
     padding-bottom: 50px;
@@ -1920,8 +1924,12 @@ label {
   }
 }
 @media (max-width: 767px) {
+
+  .section-4 {
+    margin: 50px auto;
+  }
   .section-2-container {
-    max-width: 100%;
+    max-width: 95%;
     padding: 20px;
   }
   .header-content {

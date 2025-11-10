@@ -474,11 +474,11 @@ h6,
   transform: scale(1.2);
 }
 
-.header2 {
+.team-header {
   height: 50vh;
   overflow: hidden;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(/img/red-hp-bannerbg.png) top center no-repeat;
+    url(/img/team-banner.png) center no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -487,7 +487,7 @@ h6,
   padding-bottom: 50px;
   color: white;
 }
-.header2 h1 {
+.team-header h1 {
   color: white;
   font-weight: 500;
 }
@@ -495,7 +495,7 @@ h6,
   height: 50vh;
   overflow: hidden;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(/img/service-bannerbg.png)  center no-repeat;
+    url(/img/service-bannerbg.png) center no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -505,6 +505,41 @@ h6,
   color: white;
 }
 .service-header h1 {
+  color: white;
+  font-weight: 500;
+}
+
+.insights-header {
+  height: 50vh;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/img/insights-banner.png) center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding-bottom: 50px;
+  color: white;
+}
+.insights-header h1 {
+  color: white;
+  font-weight: 500;
+}
+.contact-header {
+  height: 50vh;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/img/contact-banner.png) center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding-bottom: 50px;
+  color: white;
+}
+.contact-header h1 {
   color: white;
   font-weight: 500;
 }
@@ -1214,26 +1249,31 @@ h6,
   padding: 0px 50px !important;
 }
 
+.teams-section2 .col-lg-3 {
+  padding: 0px;
+  border: 1px solid #f1f1f1;
+}
 .teams-section2 img {
   width: 100%;
   object-fit: cover;
-  border-radius: 10px;
 }
 .teams-section2 .row {
   padding: 0px;
 }
 .teams-section2 .name {
-  margin-top: 10px;
+  margin-top: 20px;
   font-weight: 600;
   color: #333;
   text-align: center;
   margin-bottom: 0px;
+  font-family: "ITC-Charter", sans-serif;
+  font-size: 20px !important;
 }
 
 .teams-section2 .role {
   color: #777;
-  font-size: 0.9rem;
-  margin-bottom: 0;
+  font-size: 14px !important;
+  margin-bottom: 20;
   text-align: center;
 }
 .teams-section3 {

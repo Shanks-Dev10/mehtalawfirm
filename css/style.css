@@ -760,6 +760,13 @@ h6,
   color: #7c7c7c;
   font-weight: 500;
 }
+.service-section2 h2 {
+  font-size: 26px;
+  font-weight: 500;
+  margin-top: 30px;
+  color: #222;
+  text-align: center;
+}
 
 /* .section-2 p {
   font-size: 18px !important;
@@ -975,7 +982,7 @@ h6,
   object-fit: cover;
 }
 
-.logo-scroll-last img{
+.logo-scroll-last img {
   width: 280px;
   height: 100%;
   object-fit: cover;
@@ -1649,14 +1656,13 @@ label {
 /* Footer */
 
 .btn button {
-  padding: 15px 25px;
   background-color: #ca250a;
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 500;
   margin-top: 20px;
 }
 .footer-sec {
@@ -1703,7 +1709,7 @@ label {
   gap: 20px;
   flex-wrap: wrap;
 }
-.footer-bottom-sec  a {
+.footer-bottom-sec a {
   text-decoration: underline;
   margin: 0px;
   color: white;
@@ -1921,7 +1927,7 @@ label {
     font-size: 14px !important;
     line-height: 20px !important;
   }
-  .logo-scroll{
+  .logo-scroll {
     flex-direction: column;
   }
   .legacy-sec1 h4 {

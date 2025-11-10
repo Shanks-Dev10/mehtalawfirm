@@ -50,10 +50,9 @@ html {
 }
 
 /* 404 */
-.bi-exclamation-triangle::before{
+.bi-exclamation-triangle::before {
   color: #ca250a;
 }
-
 
 /* Default state — white icon */
 .navbar.navbar-light .navbar-toggler-icon {
@@ -697,8 +696,8 @@ h6,
   margin: 50px auto;
 }
 .service-section1 h2 {
-  font-weight: 600;
-  color: var(--primary);
+  font-weight: 700;
+  color: #000;
   text-align: center;
   font-size: 32px;
 }
@@ -897,19 +896,42 @@ h6,
   margin: 0px;
 }
 
-.partners {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  gap: 50px;
-  row-gap: 70px;
-  justify-content: center;
-  margin-top: 40px;
+.partner {
+  overflow: hidden;
+  position: relative;
 }
-.partners img {
-  width: 200px;
-  filter: grayscale(100%) brightness(60%) contrast(85%);
-  opacity: 0.8;
+
+.logo-scroll {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: max-content;
+  animation: scroll-left 20s linear infinite;
+}
+
+.logo-scroll div {
+  flex: 0 0 auto;
+  /* border: 1px solid #e5e5e5; */
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 8px;
+  background: #fff;
+}
+
+.logo-scroll img {
+  width: 150px;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Continuous smooth scroll */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .section-5 h2 {
@@ -1012,7 +1034,7 @@ h6,
 
 .service-card h3 {
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-top: 30px;
   color: #222;
 }
@@ -1127,18 +1149,22 @@ h6,
 /* teams page */
 
 .teams-section1-cont h2 {
-  color: #ca250a;
-  font-weight: 500;
+  color: black;
+  font-weight: 700;
+  font-size: 32px;
 }
 .teams-section1-cont h4 {
   color: #7c7c7c;
   font-size: 24px !important;
   font-weight: 500;
-  line-height: 30px;
 }
 .teams-section1-cont p {
   color: #7c7c7c;
-  font-size: 18px !important;
+  font-size: 16px !important;
+  margin-top: 15px;
+  text-align: center;
+  margin-bottom: 0px !important;
+  font-weight: 500;
 }
 .team-sec2-head {
   display: flex;
@@ -1147,9 +1173,10 @@ h6,
   align-items: center;
 }
 .team-sec2-head p:nth-child(2) {
-  color: #ca250a;
-  font-size: 26px !important;
-  font-weight: 600;
+  color: black;
+  font-size: 32px !important;
+  font-weight: 700;
+  font-family: "ITC-Charter", sans-serif;
 }
 .teams-section1 img {
   width: 100%;
@@ -1168,11 +1195,7 @@ h6,
   gap: 10px;
   padding: 0px 50px !important;
 }
-.teams-section1-cont p {
-  margin-top: 15px;
-  text-align: center;
-  margin-bottom: 0px !important;
-}
+
 .teams-section2 img {
   width: 100%;
   object-fit: cover;
@@ -1252,26 +1275,26 @@ h6,
   gap: 8px;
 }
 .industry-sec1 h2 {
-  font-weight: 500;
+  font-weight: 700;
   text-align: center;
   font-size: 32px;
   text-transform: uppercase;
-  color: #ca250a;
+  color: #000;
 }
 .industry-sec1 p {
   text-align: center;
   color: #7c7c7c;
-  font-size: 18px !important;
-  font-weight: 400;
+  font-size: 16px !important;
+  font-weight: 500;
   width: 55%;
   line-height: 25px;
 }
 .industry-section2 h2 {
-  font-weight: 500;
+  font-weight: 700;
   text-align: center;
   font-size: 32px;
   text-transform: uppercase;
-  color: #ca250a;
+  color: #000;
   margin-bottom: 48px;
 }
 
@@ -1339,11 +1362,11 @@ h6,
 
 /* contact */
 .contact-section1 h2 {
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   font-size: 32px;
   text-transform: uppercase;
-  color: #ca250a;
+  color: #000;
   margin-bottom: 48px;
 }
 .contact-address {
@@ -1491,12 +1514,14 @@ label {
   gap: 10px;
 }
 .legacy-sec1 h2 {
-  color: #ca250a;
-  font-weight: 500;
+  color: #000;
+  font-weight: 700;
+  font-size: 32px;
   text-transform: uppercase;
 }
 .legacy-sec1 h4 {
   color: #7c7c7c;
+  font-weight: 500;
 }
 .legacy-img-con {
   text-align: center;
@@ -1525,8 +1550,8 @@ label {
   justify-content: center;
 }
 .legal-sec1 h2 {
-  font-weight: 500;
-  color: #ca250a;
+  font-weight: 700;
+  color: #000;
   text-align: center;
   text-transform: uppercase;
 }
@@ -1535,7 +1560,7 @@ label {
   margin: 0px;
 }
 .legal-sec2 h2 {
-  color: #ca250a;
+  color: #000;
   font-weight: 500;
   margin-bottom: 20px;
 }
@@ -1750,10 +1775,9 @@ label {
     font-size: 18px;
   }
 
-  .our-services1{
+  .our-services1 {
     align-items: start;
   }
-
 
   .our-services h3 {
     font-size: 16px !important;
@@ -1798,6 +1822,9 @@ label {
   }
   .container {
     max-width: 95%;
+  }
+  .legacy-sec1{
+    padding: 20px;
   }
 }
 @media (max-width: 767px) {
@@ -1958,6 +1985,13 @@ label {
   }
   .right-img img {
     border-radius: 0px;
+  }
+
+  .teams-section1-cont{
+    padding: 20px !important; 
+  }
+  .how-we-work-sec2 .inner-box{
+    padding: 20px;
   }
   /* footer */
   .footer-sec {

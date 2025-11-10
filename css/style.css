@@ -491,6 +491,23 @@ h6,
   color: white;
   font-weight: 500;
 }
+.service-header {
+  height: 50vh;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/img/service-bannerbg.png)  center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding-bottom: 50px;
+  color: white;
+}
+.service-header h1 {
+  color: white;
+  font-weight: 500;
+}
 
 .search-btn {
   background: transparent;
@@ -1568,10 +1585,10 @@ label {
 .legal-sec2 {
   padding: 30px;
 }
-.legal-sec2 ul{
+.legal-sec2 ul {
   padding-left: 20px;
 }
-.legal-sec2 li{
+.legal-sec2 li {
   padding-bottom: 20px;
   font-size: 16px;
   font-weight: 500;
@@ -1809,7 +1826,7 @@ label {
     padding: 20px;
   }
   .legal-sec2 h2 {
-    font-size:24px !important;
+    font-size: 24px !important;
   }
   .section-3 {
     padding: 0px;
@@ -1832,7 +1849,7 @@ label {
   .container {
     max-width: 95%;
   }
-  .legacy-sec1{
+  .legacy-sec1 {
     padding: 20px;
   }
 }
@@ -1996,10 +2013,10 @@ label {
     border-radius: 0px;
   }
 
-  .teams-section1-cont{
-    padding: 20px !important; 
+  .teams-section1-cont {
+    padding: 20px !important;
   }
-  .how-we-work-sec2 .inner-box{
+  .how-we-work-sec2 .inner-box {
     padding: 20px;
   }
   /* footer */

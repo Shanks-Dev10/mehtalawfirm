@@ -899,20 +899,20 @@ h6,
 .section-3 .reach-out {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 50px;
 }
-.reach-out-con {
+/* .reach-out-con {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
+  flex-direction: row;
+  align-items: center;
+} */
 
 .section-3 h2 {
   color: black;
   font-size: 40px;
   font-weight: 500;
   margin: 0;
-  width: 500px;
 }
 
 .section-3 a {
@@ -929,7 +929,7 @@ h6,
   align-items: center;
   gap: 20px;
   width: fit-content;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 .section-4 {
   max-width: 90%;
@@ -1224,7 +1224,7 @@ h6,
 }
 .teams-section1-cont p {
   color: #7c7c7c;
-  font-size: 16px !important;
+  font-size: 18px !important;
   margin-top: 15px;
   text-align: center;
   margin-bottom: 0px !important;
@@ -1321,7 +1321,7 @@ h6,
   object-fit: cover;
 }
 .how-we-work-sec2 .inner-box {
-  border: 1px solid #D4D4D4;
+  border: 1px solid #d4d4d4;
   padding: 30px;
   height: 100%;
   display: flex;
@@ -1332,7 +1332,7 @@ h6,
   background-color: #f5f7f8;
 }
 .how-we-work-sec2 .inner-box1 {
-  border: 1px solid #D4D4D4;
+  border: 1px solid #d4d4d4;
   padding: 30px;
   height: 100%;
   display: flex;
@@ -1441,7 +1441,7 @@ h6,
   letter-spacing: 1px;
   font-weight: 400;
   color: black;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
 }
 
 /* contact */
@@ -1638,6 +1638,7 @@ label {
   color: #000;
   text-align: center;
   text-transform: uppercase;
+  font-size: 32px;
 }
 .legal-sec1 p {
   text-align: center;
@@ -1798,8 +1799,7 @@ label {
 }
 
 @media (max-width: 768px) {
-
-  .section-1-sub3{
+  .section-1-sub3 {
     padding: 20px;
   }
   .header-content {
@@ -1903,13 +1903,18 @@ label {
     text-align: center;
     justify-content: center;
   }
+  .section-3 h2{
+    font-size: 26px;
+  }
   .section-3 .reach-out {
     display: flex;
-    gap: 50px;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 0px 10px;
   }
-  .section-3 h2 {
+  /* .section-3 h2 {
     width: 400px;
-  }
+  } */
   .teams-section1-cont h4 {
     font-size: 16px !important;
   }
@@ -1924,7 +1929,6 @@ label {
   }
 }
 @media (max-width: 767px) {
-
   .section-4 {
     margin: 50px auto;
   }

@@ -38,10 +38,12 @@
   font-style: normal;
 }
 
-.form-floating>.form-control:focus ~ label, .form-floating>.form-control:not(:placeholder-shown) ~ label, .form-floating>.form-select ~ label{
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
   opacity: 100%;
 }
-textarea.form-control{
+textarea.form-control {
   min-height: 100px;
 }
 
@@ -81,7 +83,8 @@ h5,
 h6 {
   font-family: "ITC-Charter", sans-serif;
 }
-p,li {
+p,
+li {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 25px !important;
   font-size: 16px !important;
@@ -656,7 +659,7 @@ h6,
   font-size: 18px !important;
   color: #7c7c7c;
   font-weight: 500;
-  line-height:25px !important;
+  line-height: 25px !important;
   text-align: justify;
 }
 .sec-1 a {
@@ -755,7 +758,7 @@ h6,
   margin: 50px auto;
 }
 .service-section1 h2 {
-  font-weight: 700;
+  font-weight: 500;
   color: #000;
   text-align: center;
   font-size: 38px;
@@ -1106,7 +1109,7 @@ h6,
 }
 
 .service-card h3 {
-  font-size: 1.3rem;
+  font-size: 26px;
   font-weight: 500;
   margin-top: 30px;
   color: #222;
@@ -1223,8 +1226,8 @@ h6,
 
 .teams-section1-cont h2 {
   color: black;
-  font-weight: 700;
-  font-size: 32px;
+  font-weight: 500;
+  font-size: 38px;
 }
 .teams-section1-cont h4 {
   color: #7c7c7c;
@@ -1245,8 +1248,8 @@ h6,
   justify-content: center;
   align-items: center;
 }
-.team-sec2-head p:nth-child(1){
-  font-size:24px ;
+.team-sec2-head p:nth-child(1) {
+  font-size: 24px !important;
 }
 .team-sec2-head p:nth-child(2) {
   color: black;
@@ -1255,7 +1258,7 @@ h6,
   font-family: "ITC-Charter", sans-serif;
   text-transform: uppercase;
 }
-.team-sec2-head p:nth-child(3){
+.team-sec2-head p:nth-child(3) {
   font-size: 20px !important;
 }
 .teams-section1 img {
@@ -1387,10 +1390,9 @@ h6,
   line-height: 25px;
 }
 .industry-section2 h2 {
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
-  font-size: 32px;
-  text-transform: uppercase;
+  font-size: 38px;
   color: #000;
   margin-bottom: 48px;
 }
@@ -1459,10 +1461,9 @@ h6,
 
 /* contact */
 .contact-section1 h2 {
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
   font-size: 32px;
-  text-transform: uppercase;
   color: #000;
   margin-bottom: 48px;
 }
@@ -1483,6 +1484,7 @@ h6,
 }
 .contact-right h4 {
   color: #000000;
+  font-weight: 500;
 }
 .contact-right {
   width: 55%;
@@ -1621,8 +1623,14 @@ label {
   color: #7c7c7c;
   font-weight: 500;
 }
+.legacy-sec1-p p{
+  font-size: 18px !important;
+}
 .legacy-img-con {
   text-align: center;
+}
+.legacy-img-con p{
+  margin: 0px;
 }
 .legacy-img-con h4 {
   margin-top: 10px;
@@ -1666,7 +1674,7 @@ label {
   margin-bottom: 20px;
 }
 .legal-sec2 {
-  padding:0px 30px;
+  padding: 0px 30px;
   margin: 0px;
 }
 .legal-sec2 ul {
@@ -1679,7 +1687,7 @@ label {
 }
 .legal-img-con img {
   width: 100%;
-  height: 100%;
+  height: 85%;
   object-fit: cover;
 }
 

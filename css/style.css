@@ -74,7 +74,7 @@ h5,
 h6 {
   font-family: "ITC-Charter", sans-serif;
 }
-p {
+p,li {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 25px !important;
   font-size: 16px !important;
@@ -641,15 +641,15 @@ h6,
 }
 .sec-1 h4 {
   color: black;
-  font-size: 44px;
+  font-size: 38px;
   font-weight: 700;
   margin-bottom: 20px;
 }
 .sec-1 p {
-  font-size: 20px !important;
+  font-size: 18px !important;
   color: #7c7c7c;
   font-weight: 500;
-  line-height: 30px !important;
+  line-height:25px !important;
   text-align: justify;
 }
 .sec-1 a {
@@ -751,13 +751,14 @@ h6,
   font-weight: 700;
   color: #000;
   text-align: center;
-  font-size: 44px;
+  font-size: 38px;
 }
 .service-section1 h3 {
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
   color: #7c7c7c;
   font-weight: 500;
+  line-height: 28px;
 }
 .service-section2 h2 {
   font-size: 26px;
@@ -844,13 +845,13 @@ h6,
 }
 
 .section-2-container-right h2 {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 500;
   margin-bottom: 10px;
   color: white;
 }
 .section-2-container-right h3 {
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 500;
   margin-bottom: 20px;
   color: white;
@@ -858,7 +859,7 @@ h6,
 .section-2-container-right p {
   color: white;
   margin-bottom: 0px;
-  font-size: 20px !important;
+  font-size: 18px !important;
 }
 .section-2-container-right a {
   display: inline-flex;
@@ -947,13 +948,13 @@ h6,
 }
 .colloborate p {
   font-weight: 500;
-  font-size: 24px !important;
+  font-size: 20px !important;
   color: #7c7c7c;
 }
 .section-4 h2 {
   color: black;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 38px;
   margin: 0px;
 }
 
@@ -1237,12 +1238,18 @@ h6,
   justify-content: center;
   align-items: center;
 }
+.team-sec2-head p:nth-child(1){
+  font-size:24px ;
+}
 .team-sec2-head p:nth-child(2) {
   color: black;
-  font-size: 32px !important;
+  font-size: 38px !important;
   font-weight: 700;
   font-family: "ITC-Charter", sans-serif;
   text-transform: uppercase;
+}
+.team-sec2-head p:nth-child(3){
+  font-size: 20px !important;
 }
 .teams-section1 img {
   width: 100%;
@@ -1346,7 +1353,7 @@ h6,
 
 .inner-box h2 {
   color: #000;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 24px !important;
 }
 
@@ -1360,18 +1367,16 @@ h6,
   gap: 8px;
 }
 .industry-sec1 h2 {
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
-  font-size: 32px;
-  text-transform: uppercase;
+  font-size: 38px;
   color: #000;
 }
 .industry-sec1 p {
   text-align: center;
   color: #7c7c7c;
-  font-size: 16px !important;
+  font-size: 20px !important;
   font-weight: 500;
-  width: 55%;
   line-height: 25px;
 }
 .industry-section2 h2 {
@@ -1597,6 +1602,7 @@ label {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin: 0px;
 }
 .legacy-sec1 h2 {
   color: #000;
@@ -1635,16 +1641,17 @@ label {
   justify-content: center;
 }
 .legal-sec1 h2 {
-  font-weight: 700;
+  font-weight: 500;
   color: #000;
   text-align: center;
-  text-transform: uppercase;
-  font-size: 44px;
+  /* text-transform: uppercase; */
+  text-transform: initial;
+  font-size: 38px;
 }
 .legal-sec1 p {
   text-align: center;
   margin: 0px;
-  font-size: 24px !important;
+  font-size: 20px !important;
 }
 .legal-sec2 h2 {
   color: #000;
@@ -1652,14 +1659,15 @@ label {
   margin-bottom: 20px;
 }
 .legal-sec2 {
-  padding: 30px;
+  padding:0px 30px;
+  margin: 0px;
 }
 .legal-sec2 ul {
   padding-left: 20px;
 }
 .legal-sec2 li {
   padding-bottom: 20px;
-  font-size: 20px;
+  font-size: 18px !important;
   font-weight: 500;
 }
 .legal-img-con img {

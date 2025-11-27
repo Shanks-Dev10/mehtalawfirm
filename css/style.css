@@ -38,6 +38,13 @@
   font-style: normal;
 }
 
+.form-floating>.form-control:focus ~ label, .form-floating>.form-control:not(:placeholder-shown) ~ label, .form-floating>.form-select ~ label{
+  opacity: 100%;
+}
+textarea.form-control{
+  min-height: 100px;
+}
+
 body,
 html {
   width: 100%;

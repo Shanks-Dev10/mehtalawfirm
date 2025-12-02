@@ -636,7 +636,7 @@ h6,
 
 .sec-1 img {
   width: 100%;
-  height: 450px;
+  height: auto;
   object-fit: cover;
 }
 .sec-1-left {
@@ -1762,6 +1762,16 @@ label {
 
 .social-link:hover {
   color: white;
+}
+
+
+/* Single Team */
+.single-team-section1-left{
+  padding: 0px 60px 0px 0px ;
+}
+
+.single-team-section1-left img{
+  height: 80% ;
 }
 
 @media (max-width: 991.98px) {
